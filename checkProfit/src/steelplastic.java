@@ -4,6 +4,8 @@ public class steelplastic implements itemP{
 
     private int BiBa;
     private int selling;
+    private int earn;
+    private int expences;
 
 
     public steelplastic() {
@@ -14,6 +16,8 @@ public class steelplastic implements itemP{
         this.BiBa = sc.nextInt();
         System.out.print("     Current Selling Price: ");
         this.selling = sc.nextInt();
+        this.earn = (this.selling*9/10);
+        this.expences = ( this.BiBa*13);
     }
 
 
@@ -25,10 +29,21 @@ public class steelplastic implements itemP{
         System.out.println("   Tentacle: 4\n");
     }
 
+
+    @Override
+    public int earn() {
+       return this.earn;
+    }
+
+
+    @Override
+    public int expences() {
+        return this.expences;
+    }
+
     @Override
     public int profit() {
-        return ((this.selling*9/10)-( this.BiBa*13));
+        return (this.earn-this.expences);
         }
-
     
 }

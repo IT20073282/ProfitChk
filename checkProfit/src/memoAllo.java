@@ -1,13 +1,14 @@
 import java.util.Scanner;
 
-import javax.swing.plaf.basic.BasicInternalFrameUI.InternalFramePropertyChangeListener;
+
 
 public class memoAllo implements itemP{
 
     private int wo_ash;
     private int ch_stalk;
     private int selling;
-
+    private int earn;
+    private int expences;
 
     public memoAllo() {
 
@@ -19,6 +20,8 @@ public class memoAllo implements itemP{
         this.ch_stalk = sc.nextInt();
         System.out.print("     Current Selling Price: ");
         this.selling = sc.nextInt();
+        this.earn = (this.selling*9/10);
+        this.expences = (this.wo_ash*15)+(this.ch_stalk*4);
     }
 
 
@@ -33,8 +36,20 @@ public class memoAllo implements itemP{
 
     @Override
     public int profit() {
-        return ((this.selling*9/10)-( (this.wo_ash*15)+(this.ch_stalk*4)));
+        return (this.earn - this.expences);
         }
+
+
+    @Override
+    public int earn() {
+        return this.earn;
+    }
+
+
+    @Override
+    public int expences() {
+        return this.expences;
+    }
 
        
     

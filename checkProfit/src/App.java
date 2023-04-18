@@ -21,18 +21,24 @@ public class App {
                     case 1:
                         Label = 0;
                         memoAllo m1 = new memoAllo();
-                        System.out.println("\nProfit for a one item is: " + m1.profit() + " Gold Bars");
+                        System.out.println("\nExpences are: "+m1.expences()+ " Gold Bars");
+                        System.out.println("Earning for one item is: " + m1.earn() + " Gold Bars");
+                        System.out.println("Profit for a one item is: " + m1.profit() + " Gold Bars");
                         break;
                     
                     case 2:
                         Label = 0;
                         manstl a1 = new manstl();
+                        System.out.println("\nExpences are: "+a1.expences()+ " Gold Bars");
+                        System.out.println("Earning for one item is: " + a1.earn() + " Gold Bars");
                         System.out.println("\nProfit for a one item is: " + a1.profit() + " Gold Bars");
                         break;
                         
                     case 3:
                         Label = 0;
                         steelplastic s1 = new steelplastic();
+                        System.out.println("\nExpences are: "+s1.expences()+ " Gold Bars");
+                        System.out.println("Earning for one item is: " + s1.earn() + " Gold Bars");
                         System.out.println("\nProfit for a one item is: " + s1.profit() + " Gold Bars");
                         break;
 

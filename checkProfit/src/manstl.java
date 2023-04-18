@@ -5,7 +5,8 @@ public class manstl implements itemP{
     private int Wutong;
     private int VolAsh;
     private int selling;
-
+    private int earn;
+    private int expences;
 
     public manstl() {
 
@@ -17,6 +18,8 @@ public class manstl implements itemP{
         this.VolAsh = sc.nextInt();
         System.out.print("     Current Selling Price: ");
         this.selling = sc.nextInt();
+        this.earn = (this.selling*9/10);
+        this.expences = (this.Wutong*13)+(this.VolAsh*7);
     }
 
 
@@ -31,7 +34,19 @@ public class manstl implements itemP{
 
     @Override
     public int profit() {
-        return ((this.selling*9/10)-( (this.Wutong*13)+(this.VolAsh*7)));
+        return (this.earn - this.expences);
+    }
+
+
+    @Override
+    public int earn() {
+        return this.earn;
+    }
+
+
+    @Override
+    public int expences() {
+        return this.expences;
     }
 
     // public void hundo(){
